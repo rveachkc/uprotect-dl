@@ -1,14 +1,31 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "uprotect-dl"
-version = "0.1.0"
 description = "Add your description here"
+dynamic = ["version"]
 readme = "README.md"
+license = {file = "LICENSE"}
 requires-python = ">=3.12"
 dependencies = [
     "rv-script-utils>=0.0.0",
 ]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Homepage = "https://github.com/rveachkc/uprotect-dl"
 
 [tool.uv]
 dev-dependencies = [
     "ruff>=0.7.1",
 ]
+
+[tool.setuptools_scm]
+version_file = "src/rv_script_lib/_version.py"
+local_scheme = "no-local-version"
